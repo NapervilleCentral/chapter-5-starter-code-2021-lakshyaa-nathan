@@ -8,6 +8,12 @@ public class mathy
     private int area=0;
     public static final double PI = 3.1415;
 
+   
+    // static takles variables from object to class level
+    // example of this is the math class, where you can use math.abs without creating an object
+    
+    
+    
     /**
         default constructor - stubed in
     */
@@ -40,7 +46,7 @@ public class mathy
         @return int sum of values
     */
 
-    public double round(double num, int zeros)
+    public static double round(double num, int zeros)
     {
 
         String afterDec = "";
