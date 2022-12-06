@@ -18,6 +18,14 @@ public class Student_Test
     Student Taylor = new Student("Taylor","Swift",home);
     Student Jill = new Student("Jill","Jones",home);
     Student Tom = new Student("Tom","Jones",home);
+    
+    
+    System.out.println(Student.get_Pop());
+    
+    System.out.println(Student.getSchool());
+    
+    
+    
 
     //System.out.println(Jill.compareTo(Taylor));
     //System.out.println(Jill.compareTo(Tom));
