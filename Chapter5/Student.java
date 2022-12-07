@@ -28,7 +28,7 @@ public class Student //implements Comparable
            
            // population is shared, but GPA, ID number, etc. is encapsulated within each object
            
-          private static Address schoolAddress = new Address("440 W. Aurora Ave.", "Naperville", "IL", 60540);
+          //private static Address schoolAddress = new Address("440 W. Aurora Ave.", "Naperville", "IL", 60540);
            
            
            population++; 
@@ -48,12 +48,12 @@ public class Student //implements Comparable
        }
     
     
-        public Address getSchool()
-        {
+        //public Address getSchool()
+        //{
     
-            return schoolAddress;
+         //   return schoolAddress;
     
-        }
+        //}
     
     
         /**

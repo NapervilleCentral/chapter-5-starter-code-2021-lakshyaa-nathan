@@ -7,7 +7,7 @@ public class mathy
 {
     private int area=0;
     public static final double PI = 3.1415;
-
+    //no one can change this value
    
     // static takles variables from object to class level
     // example of this is the math class, where you can use math.abs without creating an object
