@@ -224,13 +224,26 @@ public class Account implements ATM //lockable, ATM ,Comparable
           /**  This is the section to implement interface Comparable
           // it compares the acctNumber
           */
+         
+         //0 - both are equal
+         //+ - obj1>obj2
+         //- - obj1<obj2
+     
+         
+         
     public int compareTo (Object o)
     {
-        return 0;
+        Account a = (Account)o;
+        //You are casting the object to the correct class
+        // we don't know what "dog" this is 
         
+        return this.acctNumber-a.acctNumber;
+        // doesn't have to give 0,1, or -1. 
+        // has to return a negative or positive number
 
 
     }//end of compareTo
+    
 }//end of class
 
 

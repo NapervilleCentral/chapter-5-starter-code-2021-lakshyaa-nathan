@@ -27,7 +27,21 @@ public class notes
         System.out.println("number: "+number);
         
         
-
+        Account one = new Account ("Me", 1001, 1000);
+        Account two = new Account("You", 2001, 2000);
+        Account three = new Account("Them", 3001, 3000);
+        Account four = new Account("Us", 4001, 4000);
+        
+        
+        // will not be tested on this part
+        Account [] bank = {four, two, one, three};
+        
+        
+        
+        Sorts.insertionSort(bank); //not a comparable object because comparable wasn't implemented
+        for(Account a: bank)
+            System.out.println(a);
+            
         
     }
 }
