@@ -6,6 +6,7 @@ comment2.params=street\ town\ st\ zip
 comment2.target=Address(java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
 comment3.params=obj
 comment3.target=int\ compareTo(java.lang.Object)
+comment3.text=\r\n\ Will\ return\ +1\ if\ the\ Street\ name\ is\ >\ or\ <\r\n\ if\ they\ are\ the\ same\ then\ check\ the\ street\ number\r\n\ 123\ Elm\ <\ 123\ Maple\r\n\ 1200\ Elm\ >\ 245\ Elm\r\n
 comment4.params=
 comment4.target=java.lang.String\ toString()
 numComments=5

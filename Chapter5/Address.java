@@ -4,7 +4,7 @@
 //  Represents a street address.
 //********************************************************************
 
-public class Address
+public class Address implements Comparable 
 {
 
    private String streetAddress, city, state;
@@ -40,13 +40,32 @@ public class Address
        Address object = (Address) obj;
        
        String streetadd = this.streetAddress;
+       String otherstreet = object.streetAddress;
        String street = streetadd.substring(streetadd.indexOf(" "), streetadd.length());
        
-       String otherstreet = obj.streetAddress;
+       
        String otherStreet = otherstreet.substring(otherstreet.indexOf(" "), otherstreet.length());
        
-       int street1num = parseInt(street);
-       int street2num = parseInt(otherStreet);
+       int street1num = Integer.parseInt(street);
+       int street2num = Integer.parseInt(otherStreet);
+       
+       if(street.equals(otherstreet)){
+           
+           String address1num = streetadd.substring(0,3);
+           String address2num = otherStreet.substring(0,3);
+           
+           int num1 = Integer.parseInt(address1num);
+           int num2 = Integer.parseInt(address2num);
+    
+           return num1-num2;
+       }
+       
+       
+       else{
+           return street1num-street2num;
+       }
+       
+       
    }
 
    

@@ -7,7 +7,7 @@
 
 import java.text.NumberFormat;
 
-public class Account implements ATM //lockable, ATM ,Comparable
+public class Account implements lockable, ATM ,Comparable
 // if you don't implement the interface, you can't have the class run 
 {
    private NumberFormat fmt = NumberFormat.getCurrencyInstance();

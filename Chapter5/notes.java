@@ -5,7 +5,7 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class notes
+public class notes 
 {
     
     public static void main(String []args)
