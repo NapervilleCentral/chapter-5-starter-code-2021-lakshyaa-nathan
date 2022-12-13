@@ -1,10 +1,4 @@
 
-/**
- * Write a description of class task_driver here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class task_driver
 {
     
@@ -24,10 +18,11 @@ public class task_driver
         
         task [] mytasks = {wife, kids, trash, organize, tile, aoc, decal, oil, beat, grade};
         
-    
         for(task t: mytasks){
-            double P = task.getPriority();
-            
+            System.out.println(mytasks);
         }
-    }
+        
+      
+   }
 }
+

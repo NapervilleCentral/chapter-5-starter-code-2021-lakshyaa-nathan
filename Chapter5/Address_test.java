@@ -10,7 +10,6 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import javax.swing.*;
 import java.util.*;
-
 public class Address_test
 {
       public static void main (String[] args)

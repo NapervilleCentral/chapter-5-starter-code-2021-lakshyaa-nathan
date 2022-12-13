@@ -1,4 +1,4 @@
-public class task implements Comparable, Priority  
+public class task implements Priority, Comparable  
 {
     private String Task;
     private double Priority;
@@ -18,9 +18,8 @@ public class task implements Comparable, Priority
     }
     
     
+    public void setPriority(double p){
+        Priority = p;
+    }
     
-    
-    
-    
-    
-}
+        }
