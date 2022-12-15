@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Register
+comment1.params=key\ lock
+comment1.target=Register(int,\ boolean)
+comment10.params=unlocker
+comment10.target=void\ unlock(int)
+comment11.params=obj
+comment11.target=int\ compareTo(java.lang.Object)
+comment2.params=
+comment2.target=java.lang.String\ getSales()
+comment3.params=
+comment3.target=int\ getCandy()
+comment4.params=key
+comment4.target=void\ setkey(int)
+comment5.params=
+comment5.target=boolean\ locked()
+comment6.params=sold
+comment6.target=void\ setCandy(int)
+comment7.params=sale
+comment7.target=void\ setSales(int)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+comment9.params=locker
+comment9.target=void\ lock(int)
+numComments=12

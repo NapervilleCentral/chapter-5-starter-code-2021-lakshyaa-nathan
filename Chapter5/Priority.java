@@ -1,9 +1,9 @@
 
 public interface Priority
 {
-    double getPriority();
+    String getPriority();
     
     public void setPriority(double p);
     
-    public double compareTo(Object T);
+    public int compareTo(Object T);
 }

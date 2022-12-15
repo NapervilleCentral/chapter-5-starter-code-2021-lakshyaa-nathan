@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Priority
 comment1.params=
-comment1.target=double\ getPriority()
+comment1.target=java.lang.String\ getPriority()
 comment2.params=p
 comment2.target=void\ setPriority(double)
 comment3.params=T
-comment3.target=double\ compareTo(java.lang.Object)
+comment3.target=int\ compareTo(java.lang.Object)
 numComments=4
