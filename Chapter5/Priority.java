@@ -5,4 +5,5 @@ public interface Priority
     
     public void setPriority(double p);
     
+    public double compareTo(Object T);
 }

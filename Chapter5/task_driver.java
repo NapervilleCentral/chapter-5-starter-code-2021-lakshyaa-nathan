@@ -18,8 +18,11 @@ public class task_driver
         
         task [] mytasks = {wife, kids, trash, organize, tile, aoc, decal, oil, beat, grade};
         
+        
+        mytasks.insertionSort();
+        
         for(task t: mytasks){
-            System.out.println(mytasks);
+            System.out.println(t);
         }
         
       
