@@ -7,13 +7,14 @@ public class registerdriver
     {
         Scanner scan = new Scanner(System.in);
         Register reg1 = new Register(1234, true);
-        Register reg2 = new Register(1234, true);
+        Register reg2 = new Register(1234, true); //sets up two registers, both are locked and password is 1234
        
         int hours; 
         
-        while(reg1.locked() && reg2.locked()){
+        while(reg1.locked() && reg2.locked()){ //checks to see if the user knows the password, keeps running until given the right password
         System.out.println("The registers are locked. What's the pin? ");
         int pintrial = scan.nextInt();
+        scan.nextLine();
         
         reg1.unlock(pintrial);
         reg2.unlock(pintrial);
@@ -21,7 +22,7 @@ public class registerdriver
         
         System.out.println("Nice job! Registers are unlocked!");
         
-        for(hours=0;hours<8;hours++){
+        for(hours=0;hours<8;hours++){ 
             //assuming business hours are 8 hours, one sale every hour
         
         
@@ -57,13 +58,13 @@ public class registerdriver
                 
                 System.out.println("How many pieces of candy were bought? ");
                 int amount = scan.nextInt();
-                reg2.setpieceCandy(amount);
+                reg2.setpieceCandy(amount); //adding pieces to the total
                 
-                double owed = amount*.05;
+                double owed = amount*.05; //calculating amount owed
                 System.out.println("You owe us $"+owed+". Pay up now!!");
                 
-                System.out.println("How much ca$h was given? ");
-                double change  = scan.nextDouble()-owed;
+                System.out.println("How much cash was given? ");
+                double change  = scan.nextDouble()-owed; //getting cash and calculating change
                 
                 System.out.println("Your change is $"+change);
                 
@@ -73,12 +74,13 @@ public class registerdriver
         
     }
       
-    
+    //printing results
     System.out.println("\nRegister 1 report: "+reg1.getSalesReport());
     System.out.println("\nRegister 2 report: "+reg2.getSalesReport());
         
     System.out.println("\nTotal sales: [Total candies sold:"+(reg1.getCandiesSold()+reg2.getCandiesSold())+" | Total pounds: "+(reg1.getpoundsCandy()+reg2.getpoundsCandy())+" | Total sales : $"+(reg1.getSales()+reg2.getSales())+"]");
     
+    //locks registers
     reg1.lock(1234);
     reg2.lock(1234);
     System.out.println("\nNice day at work! Both registers have been locked");

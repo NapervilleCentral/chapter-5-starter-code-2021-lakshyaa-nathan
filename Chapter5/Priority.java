@@ -1,7 +1,7 @@
 
 public interface Priority
 {
-    String getPriority();
+    double getPriority();
     
     public void setPriority(double p);
     

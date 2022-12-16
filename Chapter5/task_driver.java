@@ -14,13 +14,16 @@ public class task_driver
         task oil = new task("Change Oil in Toyota", 1.1);
         task beat = new task("Beat Mike in Advent of Code ", 1);
         task grade = new task("Grade", 10);
-        
+        // sets objects
         
         task [] mytasks = {wife, kids, trash, organize, tile, aoc, decal, oil, beat, grade};
         
         
+        //sorts priority
         Sorts.insertionSort(mytasks);
         
+        
+        //prints
         for(task t: mytasks){
             System.out.println(t);
         }

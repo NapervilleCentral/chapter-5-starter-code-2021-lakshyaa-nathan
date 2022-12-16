@@ -1,37 +1,61 @@
-public class task implements Priority, Comparable  
+public class task implements Priority, Comparable 
 {
     private String Task;
     private double Priority;
     
+    
+    /**
+     * Constructs instances of class
+     */
     public task(String task, double priority){
         Task = task;
         Priority = priority;
     }
     
     
-    
-    public String getPriority(){
-        return Priority+"";
+    /**
+     * gets priority
+     */    
+    public double getPriority(){
+        return Priority;
     }
     
     
-    
+    /**
+     * returns output  
+     */ 
     public String toString(){
-        return Task;
+        return Task+" "+Priority;
     }
     
-    
+    /**
+     * changes the priority of the task 
+     */ 
     public void setPriority(double p){
         Priority = p;
     }
     
     
-    public int compareTo(Object T){
-        task aTask = (task) T;
+    
+    /**
+     * compares the priorities 
+     */ 
+    public int compareTo(Object obj){
+        task aTask = (task) obj;
         
-        int compare = this.getPriority().compareTo(aTask.getPriority());
+        if(this.getPriority()>aTask.getPriority()){
+            return 1;
+        }
         
-        return compare;
+        else if(this.getPriority()<aTask.getPriority()){
+            return -1;
+        }
+        else
+            return 0;
+        
+        
+        
+        
     }
     
 }
