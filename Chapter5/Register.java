@@ -1,29 +1,32 @@
-
-
 public class Register implements lockable, Comparable
 {
-    private int password;
-    private boolean lock;
+    private int key=1234;
+    private boolean lock; //lock status
     //true = unlocked
-    private double sales;
-    private int candies;
+    private int password;
+    
+    private double sales; //total sales
+    private double candies; //pieces of candies in total
     
     public Register(int key, boolean lock)
     {
-        setkey(key);
-        boolean Lock = lock;
-        double sales = 0;
-        int candies = 0;
+        this.password = key;
+        this.lock = lock;
+        this.sales = 0;
+        this.candies = 0;
     }
 
     
-    public String getSales(){
-        return sales+"";
+    
+    
+    public double getSales(){
+        return sales;
     }
     
-    public int getCandy(){
+    public double getCandiesSold(){
         return candies;
     }
+    
     
     public void setkey(int key){
         int password = key;
@@ -34,16 +37,27 @@ public class Register implements lockable, Comparable
     }
     
     
-    public void setCandy(int sold){
-        candies+=sold;
+    public void setpoundsCandy(double pounds){
+        
+        candies+=pounds/20;
+        sales+=1*pounds; //1 dollar per pound
     }
     
-    public void setSales(int sale){
-        sales+=sale;
+    public double getpoundsCandy(){
+        return candies*20;
+    }
+    
+    /**
+     * two setters for setting candy because apparently 
+     * the kiddos like the ability to choose
+     */
+    public void setpieceCandy(int pieces){
+        candies+=pieces; //adding pieces of candy to the total
+        sales+=.05*pieces; //updates sales too
     }
     
     
-    public String toString(){
+    public String getSalesReport(){
         if(this.locked())
             return "Locked, please unlock :(";
         else
@@ -52,20 +66,23 @@ public class Register implements lockable, Comparable
     }
     
     public void lock ( int locker){
-        if(this.password==locker){
-            lock = false;
-        }
-    }
-    
-    public void unlock(int unlocker){
-        if(this.password==unlocker){
+        if(key==locker){
             lock = true;
         }
     }
     
+    public void unlock(int unlocker){
+        if(key==unlocker){
+            lock = false;
+        }
+    }
+    
+    
+    
     public int compareTo(Object obj){
         Register reg = (Register) obj;
-        int difference = this.getSales().compareTo(reg.getSales());
+        
+        int difference = Double.valueOf(this.getSales()).compareTo(Double.valueOf(reg.getSales()));
         return difference;
     }
     
